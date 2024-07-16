@@ -33,7 +33,6 @@
  */
 var createCounter = function(n) {
     return function() {
-        console.log(n)
         return n++
     };
 };
@@ -45,4 +44,6 @@ var createCounter = function(n) {
  counter() // 12
  
 // Explanation
-// 
+// - The createCounter fnx takes n as a value, and return an anonymous fnx.
+// - the anonumous fnx creates a clousure around the n value, and allows to keep its state across multiple calls.
+// - Each time the anonymous fnx is called it returns the current value of n, and then increments it by one
